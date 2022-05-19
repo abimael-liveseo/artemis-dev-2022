@@ -2,38 +2,154 @@
   <head>
     <meta charset="UTF-8" />
     <script src="script.js"></script>
-    <!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
     <title>projeto do artemis</title>
+    <style>
+      /*     
+      #artemis{
+        background: black;
+        background-image: url(https://static1.patasdacasa.com.br/articles/8/10/38/@/4864-o-cachorro-inteligente-mostra-essa-carac-articles_media_mobile-1.jpg);
+        background-position: center right;
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        color: white; 
+        border: 3px solid red;
+        padding: 10px 20px;
+
+        font-size: 20px;
+
+      }
+
+      .botao{
+        color: white;
+        font-size: 20px;
+        background: blue;
+        padding: 10px;
+        border: none;
+
+        transition: all .3s ease;
+      }
+      .botao:hover{
+        background: yellow;
+        padding: 15px;
+        color: black;
+      } */
+
+      body {
+        margin: 0;
+        font-family: Arial;
+      }
+      h1 {
+        text-align: center;
+        background: #111;
+        color: #eee;
+        padding: 10px 20px;
+      }
+
+      section {
+        padding: 10px 20px;
+        border: 4px solid #eee;
+        margin: 20px auto;
+        width: 400px;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        margin: 0;
+      }
+
+      h1 {
+        position: fixed;
+        width: 100%;
+        top: 0px;
+        z-index: 1;
+      }
+
+      a {
+        color: black;
+      }
+
+      input {
+        border: 1px solid black;
+        margin: 5px;
+        padding: 4px 10px;
+        outline: 0;
+      }
+
+      input:focus {
+        border: 2px solid orange;
+      }
+
+      ul li {
+        line-height: 25px;
+      }
+      ul li img {
+        vertical-align: top;
+      }
+
+      img {
+        opacity: 0.5;
+        width: 100%;
+        max-width: 400px;
+        min-width: 150px;
+        margin: 0 auto;
+        display: block;
+      }
+
+      .small {
+        width: 40px;
+        min-width: 0;
+        display: inline;
+      }
+
+      .flex {
+        display: flex;
+      }
+    </style>
   </head>
   <body>
     <h1>Artemis program</h1>
+    <section>
+      <h2>Tarefa 1º dia:</h2>
+      <ul>
+        <li>
+          Resumo
 
-    <h2>Tarefa 1º dia:</h2>
-    <ul>
-      <li>Resumo da 1ª aula</li>
-      <li>Explicar o que entendeu sobre HTML</li>
-      <li>Formulário (um evento + um convidado)</li>
-    </ul>
+          <img
+            class="small"
+            src="https://static1.patasdacasa.com.br/articles/8/10/38/@/4864-o-cachorro-inteligente-mostra-essa-carac-articles_media_mobile-1.jpg"
+          />
 
-    <h2></h2>
-    <ul>
-      <li>
-        <a href="https://www.w3schools.com/tags/default.asp">Tags HTML</a>
-      </li>
-      <li>
-        <a href="https://www.w3schools.com/html/html5_semantic_elements.asp"
-          >Elementos semânticos</a
-        >
-      </li>
-      <li>
-        <a href="https://htmledit.squarefree.com/">Editar HTML tempo real</a>
-      </li>
-      <li>
-        <a href="https://github.com/chrisprice/explodz"
-          >Script visualizador 3d</a
-        >
-      </li>
-    </ul>
+          da 1ª aula
+        </li>
+        <li>Explicar o que entendeu sobre HTML</li>
+        <li>Formulário (um evento + um convidado)</li>
+      </ul>
+
+      <h2></h2>
+      <ul class="flex">
+        <li>
+          <a href="https://www.w3schools.com/tags/default.asp">Tags HTML</a>
+        </li>
+        <li>
+          <a href="https://www.w3schools.com/html/html5_semantic_elements.asp"
+            >Elementos semânticos</a
+          >
+        </li>
+        <li>
+          <a href="https://htmledit.squarefree.com/">Editar HTML tempo real</a>
+        </li>
+        <li>
+          <a href="https://github.com/chrisprice/explodz"
+            >Script visualizador 3d</a
+          >
+        </li>
+      </ul>
+    </section>
 
     <br />
     <br />
@@ -58,10 +174,13 @@
 
     <br />
 
-    <img
-      src="https://static1.patasdacasa.com.br/articles/8/10/38/@/4864-o-cachorro-inteligente-mostra-essa-carac-articles_media_mobile-1.jpg"
-      width="100%"
-    />
+    <p>
+      <img
+        style="float: left"
+        src="https://static1.patasdacasa.com.br/articles/8/10/38/@/4864-o-cachorro-inteligente-mostra-essa-carac-articles_media_mobile-1.jpg"
+      />
+      Um texto bem legal para mostar o float
+    </p>
 
     <div>texto</div>
     <div>texto</div>
@@ -69,11 +188,11 @@
     <form>
       <label style="display: block">
         Nome:
-        <input type="text" name="name" />
+        <input type="text" name="name" placeholder="Nome" />
       </label>
       <label style="display: block">
         E-mail:
-        <input type="email" name="email" />
+        <input type="email" name="email" value="abimael@liveseo.com.br" />
       </label>
       <label style="display: block">
         Senha:
@@ -92,13 +211,16 @@
         <input type="radio" name="serie" value="2" /> Modern family
       </label>
 
-      <textarea cols="30" rows="10"></textarea>
+      <textarea cols="30" rows="4">
+        aqui dentro
+      </textarea>
+
       <input type="file" />
 
       <select>
-        <option value="">opção 1</option>
-        <option value="">opção 2</option>
-        <option value="">opção 3</option>
+        <option value="1">opção 1</option>
+        <option value="2">opção 2</option>
+        <option selected value="3">opção 3</option>
       </select>
 
       <input type="submit" value="Manda agora!" />
